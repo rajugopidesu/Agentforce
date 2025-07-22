@@ -20,7 +20,7 @@ agentforce = Agentforce(auth=auth)
 
 # Define the action
 action = Action(
-    name="findOrder action",
+    name="findOrder action agentforce",
     description="Find order details using an order ID",
     inputs=[
         Input(
@@ -38,7 +38,7 @@ action = Action(
 
 # Define the topic
 topic = Topic(
-    name="Order Management Topic",
+    name="Order Management Topic Agentforce",
     description="Handles all user requests related to finding and managing orders",
     scope="public",
     instructions=[
