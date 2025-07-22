@@ -1,13 +1,12 @@
-from flask import Flask, request, jsonify
-from agentforce_sdk import Agentforce, AgentUtils
-from agentforce_sdk.models.agent import Agent
-from agentforce_sdk.models.topic import Topic
-from agentforce_sdk.models.action import Action
-from agentforce_sdk.models.input import Input
-from agentforce_sdk.models.output import Output
-from agentforce_sdk.models.system_message import SystemMessage
-from agentforce_sdk.models.variable import Variable
-from agentforce_sdk.core.auth import BasicAuth
+from agent_sdk import Agentforce, AgentUtils
+from agent_sdk.models.agent import Agent
+from agent_sdk.models.topic import Topic
+from agent_sdk.models.action import Action
+from agent_sdk.models.input import Input
+from agent_sdk.models.output import Output
+from agent_sdk.models.system_message import SystemMessage
+from agent_sdk.models.variable import Variable
+from agent_sdk.core.auth import BasicAuth
 
 app = Flask(__name__)
 
