@@ -31,12 +31,12 @@ def create_agent():
                 Input(
                     name="orderID",
                     description="Order identification number",
-                    data_type="string",
+                    data_type="Text",
                 )
             ],
             outputs=[
                 Output(
-                    name="orderDetails", description="Details of the order", data_type="object"
+                    name="orderDetails", description="Details of the order", data_type="Object"
                 )
             ],
         )
@@ -66,7 +66,7 @@ def create_agent():
             variables=[
                 Variable(
                     name="apiKey",
-                    data_type="string",
+                    data_type="Text",
                     var_type="conversation",
                     visibility="Internal",
                     developer_name="apiKey",
