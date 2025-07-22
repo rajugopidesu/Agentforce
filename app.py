@@ -39,6 +39,7 @@ def create_agent():
                     name="orderDetails", description="Details of the order", data_type="Object"
                 )
             ],
+            invocation_target="OrderService.findOrder"  # Specify your Apex class and method here
         )
 
         topic = Topic(
@@ -53,7 +54,7 @@ def create_agent():
         )
 
         agent = Agent(
-            name="SDK Agent",
+            name="SDK Agentforce Agent",
             description="An agent created programmatically for order management",
             agent_type="External",
             agent_template_type="EinsteinServiceAgent",
