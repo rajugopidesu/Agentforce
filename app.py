@@ -10,11 +10,7 @@ from agent_sdk.models.variable import Variable
 from agent_sdk.core.auth import BasicAuth
 
 app = Flask(__name__)
-# Replace with your Salesforce credentials
-username = "rajugopidesu343@agentforce.com"
-password = "Ganga@73969405918rfUvYKF3DkBlvT3MphTofv07"
 
-auth = BasicAuth(username=username, password=password)
 
 # Initialize the AgentForce client
 agentforce = Agentforce(auth=auth)
