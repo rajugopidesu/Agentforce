@@ -25,7 +25,7 @@ def create_agent():
         agentforce = Agentforce(auth=auth)
 
         action = Action(
-            name="findOrder sdk",
+            name="findOrder sdkAgent",
             description="Find order details using an order ID",
             inputs=[
                 Input(
@@ -42,7 +42,7 @@ def create_agent():
         )
 
         topic = Topic(
-            name="Order Management test",
+            name="Order Management SDK",
             description="Handles all user requests related to finding and managing orders",
             scope="public",
             instructions=[
@@ -53,7 +53,7 @@ def create_agent():
         )
 
         agent = Agent(
-            name="SDK Agent",
+            name="Agentforce SDK Agent ",
             description="An agent created programmatically for order management",
             agent_type="External",
             agent_template_type="EinsteinServiceAgent",
