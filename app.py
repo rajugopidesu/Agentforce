@@ -11,9 +11,6 @@ from agent_sdk.core.auth import BasicAuth
 
 app = Flask(__name__)
 
-
-# Initialize the AgentForce client
-agentforce = Agentforce(auth=auth)
 @app.route('/create_agent', methods=['POST'])
 def create_agent():
     data = request.get_json()
@@ -26,9 +23,10 @@ def create_agent():
     try:
         auth = BasicAuth(username=username, password=password)
         agentforce = Agentforce(auth=auth)
-/*
+
+        # Define the action with correct data types and a unique name
         action = Action(
-            name="findOrderAction",
+            name="FindOrderAction",
             description="Find order details using an order ID",
             inputs=[
                 Input(
@@ -45,21 +43,20 @@ def create_agent():
             invocation_target="OrderService.findOrder"  # Specify your Apex class and method here
         )
 
-        */
-
+        # Define the topic with a unique name
         topic = Topic(
-            name="Order Management Topic",
+            name="OrderManagementTopic",
             description="Handles all user requests related to finding and managing orders",
             scope="public",
             instructions=[
                 "If a user cannot find their order, attempt to locate it using the order ID",
                 "If a user wants to check the status of their order, retrieve the order details",
             ],
-            # actions=[action],
+            actions=[action],
         )
 
         agent = Agent(
-            name="SDK Agentforce Agent",
+            name="SDK_Agent",
             description="An agent created programmatically for order management",
             agent_type="External",
             agent_template_type="EinsteinServiceAgent",
