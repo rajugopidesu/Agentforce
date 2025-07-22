@@ -23,9 +23,9 @@ def create_agent():
     try:
         auth = BasicAuth(username=username, password=password)
         agentforce = Agentforce(auth=auth)
-
+/*
         action = Action(
-            name="findOrder action",
+            name="findOrderAction",
             description="Find order details using an order ID",
             inputs=[
                 Input(
@@ -42,6 +42,8 @@ def create_agent():
             invocation_target="OrderService.findOrder"  # Specify your Apex class and method here
         )
 
+        */
+
         topic = Topic(
             name="Order Management Topic",
             description="Handles all user requests related to finding and managing orders",
@@ -50,7 +52,7 @@ def create_agent():
                 "If a user cannot find their order, attempt to locate it using the order ID",
                 "If a user wants to check the status of their order, retrieve the order details",
             ],
-            actions=[action],
+            # actions=[action],
         )
 
         agent = Agent(
