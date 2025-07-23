@@ -44,7 +44,7 @@ def create_agent():
 
         # Define the topic
         topic = Topic(
-            name="Order Management Topic Agentforce",
+            name="Order Management Topic Agentforce updated",
             description="Handles all user requests related to finding and managing orders",
             scope="public",
             instructions=[
@@ -56,7 +56,7 @@ def create_agent():
 
         # Define the agent
         agent = Agent(
-            name="SDK Agentforce Agent",
+            name="SDK Order Management Agentforce Agent",
             description="An agent created programmatically for order management",
             agent_type="External",
             agent_template_type="EinsteinServiceAgent",
