@@ -14,8 +14,12 @@ app = Flask(__name__)
 @app.route('/create_agent', methods=['POST'])
 def create_agent():
     data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
+   # username = data.get('username')
+   # password = data.get('password')
+    
+    # Replace with your Salesforce credentials
+   # username = "rajugopidesu343@agentforce.com"
+   # password = "Ganga@73969405918rfUvYKF3DkBlvT3MphTofv07"
 
     if not username or not password:
         return jsonify({'error': 'Username and password required'}), 400
@@ -112,7 +116,7 @@ topic = Topic(
 
 # Define the agent
 agent = Agent(
-    name="SDK Agentforce Agent",
+    name="Employee Order Management Agent Agentforce",
     description="An agent created programmatically for order management",
     agent_type="External",
     agent_template_type="EinsteinServiceAgent",
