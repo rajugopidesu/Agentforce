@@ -45,7 +45,7 @@ def create_agent():
 
         # Define the topic with a unique name
         topic = Topic(
-            name="OrderManagementTopic",
+            name="OrderManagementTopic Agentforce Agent Topic",
             description="Handles all user requests related to finding and managing orders",
             scope="public",
             instructions=[
@@ -56,7 +56,7 @@ def create_agent():
         )
 
         agent = Agent(
-            name="SDK_Agent",
+            name="Employee Management Agent",
             description="An agent created programmatically for order management",
             agent_type="External",
             agent_template_type="EinsteinServiceAgent",
@@ -66,16 +66,7 @@ def create_agent():
                 SystemMessage(message="Welcome to Order Management!", msg_type="welcome"),
                 SystemMessage(message="I'm sorry, I encountered an error.", msg_type="error"),
             ],
-            variables=[
-                Variable(
-                    name="apiKey",
-                    data_type="Text",
-                    var_type="conversation",
-                    visibility="Internal",
-                    developer_name="apiKey",
-                    label="API Key"
-                )
-            ],
+            variables=[],
             topics=[topic],
         )
 
